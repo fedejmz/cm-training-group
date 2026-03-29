@@ -18,6 +18,7 @@
     --wa: #25D366;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
   html { scroll-behavior: smooth; }
   body {
     background: var(--black);
@@ -274,16 +275,58 @@
 
   /* RESPONSIVE */
   @media (max-width: 800px) {
-    nav { padding: 14px 20px; }
+    nav { padding: 12px 16px; }
     .nav-links { display: none; }
-    section { padding: 70px 20px; }
-    h1 { font-size: clamp(56px, 14vw, 90px); }
-    .pres-grid { grid-template-columns: 1fr; gap: 40px; }
-    .planes-grid { grid-template-columns: 1fr; }
-    .pol-grid { grid-template-columns: 1fr; }
-    footer { padding: 40px 20px; flex-direction: column; align-items: flex-start; }
-    .hero-bubbles { gap: 10px; }
-    .bubble { padding: 12px 20px; font-size: 13px; }
+    .nav-wa span { display: none; }
+    .nav-wa { padding: 8px 12px; border-radius: 50%; }
+
+    #hero { padding: 100px 20px 60px; }
+    #hero img { height: clamp(100px, 35vw, 160px) !important; }
+    .hero-tag { font-size: 11px; letter-spacing: .14em; }
+    .hero-subtitle { font-size: 14px; margin: 16px auto 32px; }
+    .hero-bubbles { gap: 8px; flex-direction: column; align-items: center; width: 100%; }
+    .bubble { padding: 13px 24px; font-size: 14px; width: 100%; max-width: 280px; justify-content: center; }
+
+    section { padding: 60px 20px; }
+    h2 { font-size: clamp(32px, 9vw, 52px); margin-bottom: 28px; }
+
+    .pres-grid { grid-template-columns: 1fr; gap: 32px; }
+    .pres-bio { font-size: 15px; }
+    .tray-stat { padding: 16px; }
+    .tray-num { font-size: 30px; min-width: 44px; }
+    .tray-text { font-size: 12px; }
+    .tray-item { font-size: 12px; }
+
+    .planes-grid { grid-template-columns: 1fr; gap: 16px; }
+    .plan-top { padding: 20px 18px 16px; }
+    .plan-body { padding: 18px; gap: 8px; }
+    .plan-price { font-size: 34px; }
+    .plan-cta { margin: 12px 18px 18px; padding: 12px; font-size: 14px; }
+    .feature { font-size: 13px; }
+
+    .pol-grid { grid-template-columns: 1fr; gap: 12px; }
+    .pol-card { padding: 20px; }
+    .pol-icon { font-size: 22px; margin-bottom: 10px; }
+    .pol-title { font-size: 17px; }
+    .pol-text { font-size: 13px; }
+
+    .step { grid-template-columns: 50px 1fr; gap: 14px; padding: 24px 0; }
+    .step-num { font-size: 38px; }
+    .step-title { font-size: 15px; }
+    .step-desc { font-size: 13px; }
+    .step-tags { gap: 4px; }
+    .step-tag { font-size: 10px; padding: 2px 8px; }
+
+    footer { padding: 32px 20px; flex-direction: column; align-items: flex-start; gap: 16px; }
+    footer img { height: 40px !important; }
+    .footer-text { font-size: 11px; }
+    .footer-wa { font-size: 13px; padding: 10px 16px; width: 100%; justify-content: center; }
+  }
+
+  @media (max-width: 400px) {
+    #hero img { height: clamp(80px, 40vw, 120px) !important; }
+    .bubble { max-width: 100%; }
+    .plan-price { font-size: 30px; }
   }
 
   /* ANIMATIONS */
